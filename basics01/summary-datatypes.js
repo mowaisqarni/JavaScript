@@ -19,4 +19,13 @@ const anotherId = Symbol('123');
     console.log("Hello world");
   }
   console.log(typeof myobj);
-  // read this for help
+  // read this for help  https://262.ecma-international.org/5.1/#sec-11.4.3
+let obj ={
+   email:"owaisqarni@gmail.com",
+   upi : "codewithchai"
+}
+let obj2=obj
+obj2.email="mowaiss1975@gmail.com"
+
+console.log(obj.email)
+console.log(obj2.email)
