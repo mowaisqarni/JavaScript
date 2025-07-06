@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS </title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+    const sayOwais=function()
+    {
+      document.querySelector('h1').innerHTML="Best JS series"
+        console.log("owais")
+    }
+    
+    let changeme = ""; // use let here
+
+    document.querySelector('#start').addEventListener('click' ,function()
+{
+   changeme= setTimeout(sayOwais,3000)
+    console.log("start")
+})
+    
+   
+    document.querySelector('#stop').addEventListener('click' ,function()
+{
+    clearTimeout(changeme)
+    console.log("stopped")
+})
+</script>
+</html>

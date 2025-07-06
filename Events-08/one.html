@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Events</title>
+  <style>
+    body {
+      background-color: #414141;
+      color: aliceblue;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      margin: 10px;
+      border: 2px solid white;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Amazing Images</h2>
+  <div>
+    <ul id="images">
+      <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop image" /></li>
+      <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="japan image" /></li>
+      <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="river image" /></li>
+      <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="owl image" /></li>
+      <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="prayer image" /></li>
+      <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+  </div>
+
+  <script>
+     // types timeStamp , Default prevented 
+    // target , to-element  , src element , currentr target 
+    // clientX , client y , screen x , screen y
+    // altkey, ctrlkey , shiftkey ,keycode
+    // Event listener on parent UL (bubbling phase)
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //   console.log("🟩 Clicked on UL");
+    //   console.log("Target:", e.target);
+    //   console.log("Current Target:", e.currentTarget);
+    //   console.log("ClientX:", e.clientX, "ClientY:", e.clientY);
+    //   console.log("Alt Key?", e.altKey);
+    // }, false);
+
+    // Event listener on specific child image
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //   console.log("🟨 Owl image clicked");
+    // //  e.stopPropagation(); // Prevent bubbling to parent
+    // }, false);
+
+// document.getElementById('google').addEventListener('click',function(e)
+// {
+// e.preventDefault()
+// e.stopPropagation()
+// console.log("google clicked")
+// },false)
+ 
+document.querySelector('#images').addEventListener('click' ,function(e)
+{
+   
+    if(e.target.parentNode === 'IMG')
+{
+ console.log(e.target.parentNode);
+    let removeit=e.target.parentNode;
+    removeit.remove()
+}
+})
+  </script>
+</body>
+</html>
