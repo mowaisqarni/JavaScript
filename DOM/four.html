@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code aur Chai </title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+
+    </ul>
+</body>
+<script>
+    function addlist(lang){
+       let li= document.createElement('li')
+        li.innerHTML= `${lang}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addlist("Golang")
+    function addl(lang)
+    {
+        const li= document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addl("python")
+// edit
+    const seclang = document.querySelector("li:nth-child(2)")
+  seclang.innerHTML = "Mojo"
+
+  const third=document.querySelector("li:nth-child(3)")
+  const newli=document.createElement('li')
+  newli.textContent='RUby on rails'
+  third.replaceWith(newli)
+
+  // remove
+  const temp=document.querySelector('li:first-child')
+  temp.remove()
+     
+</script>
+</html>
